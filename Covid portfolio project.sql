@@ -33,7 +33,7 @@ ALTER COLUMN population float;
 -- Shows likelihood of dying in Denmark if you get corona
 Select location, date, total_cases, total_deaths, (total_deaths / total_cases)*100 as DeathPercentage
 From PortfolioProject..covidDeaths
---Where location like '%Denmark'
+Where location like '%Denmark'
 where continent is not null
 order by 1,2
 
@@ -76,7 +76,7 @@ order by TotalDeathCount desc
 --order by TotalDeathCount desc
 
 
--- showing continent with igest death count per population
+-- showing continent with higest death count per population
 
 Select continent, MAX(total_deaths) as TotalDeathCount 
 From PortfolioProject..covidDeaths
